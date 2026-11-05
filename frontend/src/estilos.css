@@ -1,0 +1,95 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: #222;
+  background: #f6f6f4;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu nav { display: flex; gap: 16px; align-items: center; }
+.menu a { color: #1a4d8f; text-decoration: none; }
+.usuario { color: #666; font-size: 0.9rem; }
+
+.pagina { max-width: 900px; margin: 24px auto; padding: 0 16px; }
+.estreita { max-width: 480px; }
+
+h1 { font-size: 1.5rem; }
+h2 { font-size: 1.2rem; margin-top: 32px; }
+
+.formulario { display: flex; flex-direction: column; gap: 12px; }
+label { display: flex; flex-direction: column; gap: 4px; font-size: 0.9rem; }
+label.marcar { flex-direction: row; align-items: center; gap: 8px; }
+
+input, select, textarea {
+  padding: 8px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  font: inherit;
+  background: #fff;
+}
+
+fieldset { border: 1px solid #ccc; border-radius: 4px; display: flex; flex-direction: column; gap: 8px; }
+.linha { display: flex; gap: 8px; }
+.linha input { flex: 1; }
+
+button {
+  padding: 8px 14px;
+  border: 1px solid #1a4d8f;
+  border-radius: 4px;
+  background: #1a4d8f;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+button.perigo { background: #fff; color: #b3261e; border-color: #b3261e; margin-top: 24px; }
+.menu button, td button, .acoes button, .linha button, fieldset > button {
+  background: #fff;
+  color: #1a4d8f;
+}
+
+table { width: 100%; border-collapse: collapse; background: #fff; }
+th, td { text-align: left; padding: 8px; border-bottom: 1px solid #eee; }
+
+.cartao {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+.cartao p { margin: 6px 0; }
+.cartao-topo { display: flex; justify-content: space-between; align-items: center; }
+
+.acoes { display: flex; gap: 12px; align-items: center; margin-top: 8px; }
+.acoes a { color: #1a4d8f; }
+
+.painel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 12px;
+  background: #f6f6f4;
+  border-radius: 4px;
+}
+
+.status { font-size: 0.8rem; padding: 2px 8px; border-radius: 10px; background: #eee; }
+.status-EM_ANALISE { background: #fff3cd; }
+.status-APROVADO { background: #d4edda; }
+.status-CONTRATADO { background: #cce5ff; }
+.status-REPROVADO, .status-CANCELADO { background: #f8d7da; }
+
+.erro { color: #b3261e; }
+.sucesso { color: #1e7b34; }
+.aviso { color: #666; }
